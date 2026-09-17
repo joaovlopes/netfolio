@@ -163,11 +163,8 @@ export default function Terminal() {
       case "habilidades":
         profile.skillGroups.forEach((group) => {
           push("success", `## ${group.category}`);
-          group.items.forEach((item) =>
-            push("output", `  ${item.name.padEnd(34, ".")} ${item.level}%`)
-          );
+          push("output", `  ${group.items.join(", ")}`);
         });
-        scrollToSection("skills");
         break;
 
       case "experience":
@@ -176,7 +173,6 @@ export default function Terminal() {
           push("success", `${exp.period}  ${exp.role} @ ${exp.org}`);
           push("output", `  ${exp.summary}`);
         });
-        scrollToSection("experiencia");
         break;
 
       case "projects":
@@ -186,7 +182,6 @@ export default function Terminal() {
           push("output", `  ${p.description}`);
           push("muted", `  stack: ${p.stack.join(", ")}`);
         });
-        scrollToSection("projetos");
         break;
 
       case "contact":

@@ -1,14 +1,9 @@
 // Dados fictícios de demonstração — substituir pelos dados reais depois.
 
-export type SkillItem = {
-  name: string;
-  level: number; // 0-100
-};
-
 export type SkillGroup = {
   category: string;
   description: string;
-  items: SkillItem[];
+  items: string[];
 };
 
 export type ExperienceItem = {
@@ -58,34 +53,29 @@ export const profile = {
       category: "Redes",
       description: "Infraestrutura, protocolos e administração",
       items: [
-        { name: "TCP/IP & Sub-redes (VLSM/CIDR)", level: 85 },
-        { name: "Roteamento (OSPF, RIP, estático)", level: 75 },
-        { name: "Switching & VLANs", level: 80 },
-        { name: "Firewall & ACLs", level: 70 },
-        { name: "Cabeamento estruturado", level: 65 },
-        { name: "Cisco Packet Tracer / GNS3", level: 78 },
+        "TCP/IP & Sub-redes (VLSM/CIDR)",
+        "Roteamento (OSPF, RIP, estático)",
+        "Switching & VLANs",
+        "Firewall & ACLs",
+        "Cabeamento estruturado",
+        "Cisco Packet Tracer / GNS3",
       ],
     },
     {
       category: "Programação",
       description: "Desenvolvimento web e automação",
       items: [
-        { name: "JavaScript / TypeScript", level: 82 },
-        { name: "React & Next.js", level: 75 },
-        { name: "Node.js", level: 70 },
-        { name: "Python (automação de redes)", level: 68 },
-        { name: "SQL", level: 60 },
+        "JavaScript / TypeScript",
+        "React & Next.js",
+        "Node.js",
+        "Python (automação de redes)",
+        "SQL",
       ],
     },
     {
       category: "Ferramentas & Sistemas",
       description: "Ambiente de trabalho",
-      items: [
-        { name: "Linux (administração básica)", level: 72 },
-        { name: "Wireshark", level: 70 },
-        { name: "Git & GitHub", level: 80 },
-        { name: "Docker", level: 55 },
-      ],
+      items: ["Linux (administração básica)", "Wireshark", "Git & GitHub", "Docker"],
     },
   ] satisfies SkillGroup[],
   experience: [

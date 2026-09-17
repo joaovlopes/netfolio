@@ -24,10 +24,10 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <button
           onClick={() => go("home")}
-          className="font-mono text-sm font-semibold tracking-tight text-foreground"
+          className="group font-mono text-sm font-semibold tracking-tight text-foreground"
         >
-          <span className="text-accent">~/</span>
-          {profile.handle}
+          <span className="text-accent transition-colors group-hover:text-signal">~/</span>
+          <span className="transition-colors group-hover:text-accent">{profile.handle}</span>
         </button>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -35,9 +35,10 @@ export default function Navbar() {
             <li key={link.id}>
               <button
                 onClick={() => go(link.id)}
-                className="font-mono text-sm text-muted transition-colors hover:text-accent"
+                className="group relative font-mono text-sm text-muted transition-colors hover:text-accent"
               >
                 {link.label}
+                <span className="absolute -bottom-1 left-0 h-px w-0 bg-accent transition-all duration-300 group-hover:w-full" />
               </button>
             </li>
           ))}
@@ -47,11 +48,11 @@ export default function Navbar() {
           onClick={() => setOpen((v) => !v)}
           aria-label="Abrir menu"
           aria-expanded={open}
-          className="flex flex-col gap-1.5 md:hidden"
+          className="group flex flex-col gap-1.5 md:hidden"
         >
-          <span className="h-0.5 w-6 bg-foreground" />
-          <span className="h-0.5 w-6 bg-foreground" />
-          <span className="h-0.5 w-4 bg-foreground" />
+          <span className="h-0.5 w-6 bg-foreground transition-colors group-hover:bg-accent" />
+          <span className="h-0.5 w-6 bg-foreground transition-colors group-hover:bg-accent" />
+          <span className="h-0.5 w-4 bg-foreground transition-colors group-hover:bg-accent" />
         </button>
       </nav>
 
