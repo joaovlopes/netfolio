@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/About";
 import Reveal from "@/components/Reveal";
 
 const CATEGORY_ICON: Record<string, typeof Network> = {
-  Redes: Network,
+  "Redes & Infraestrutura": Network,
   Programação: Code2,
   "Ferramentas & Sistemas": Wrench,
 };

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { profile } from "@/data/profile";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,9 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "João Silva — Redes & Desenvolvimento",
-  description:
-    "Portfolio de João Silva: técnico em redes de computadores e desenvolvedor. Explore habilidades e projetos por um terminal interativo.",
+  title: `${profile.name} — Redes & Desenvolvimento`,
+  description: `Portfolio de ${profile.name}: ${profile.role.toLowerCase()}. Explore habilidades e projetos por um terminal interativo.`,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
