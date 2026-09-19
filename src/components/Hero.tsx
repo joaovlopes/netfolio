@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="space-y-4">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             Olá, eu sou{" "}
-            <span className="text-accent">{profile.name}</span>
+            <span className="text-accent">{profile.displayName}</span>
           </h1>
           <p className="mx-auto max-w-xl text-balance font-mono text-sm text-muted sm:text-base">
             {profile.role}

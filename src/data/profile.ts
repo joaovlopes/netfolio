@@ -35,6 +35,7 @@ export type CertificationItem = {
 
 export const profile = {
   name: "João Victor Lopes Martins",
+  displayName: "João Lopes",
   handle: "joaovlopes",
   role: "Analista de Redes e Infraestrutura & Desenvolvedor Front-end",
   tagline:

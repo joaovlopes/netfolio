@@ -106,7 +106,7 @@ function ifconfigOutput(): string[] {
 
 export default function Terminal() {
   const [lines, setLines] = useState<Line[]>([
-    { id: nextId(), kind: "success", text: `bem-vindo ao terminal de ${profile.name}` },
+    { id: nextId(), kind: "success", text: `bem-vindo ao terminal de ${profile.displayName}` },
     { id: nextId(), kind: "muted", text: 'digite "help" para ver os comandos disponíveis' },
   ]);
   const [input, setInput] = useState("");
@@ -227,7 +227,7 @@ export default function Terminal() {
         break;
 
       case "banner":
-        push("success", `bem-vindo ao terminal de ${profile.name}`);
+        push("success", `bem-vindo ao terminal de ${profile.displayName}`);
         push("muted", 'digite "help" para ver os comandos disponíveis');
         break;
 
