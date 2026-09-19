@@ -137,6 +137,17 @@ export const profile = {
   ] satisfies ExperienceItem[],
   projects: [
     {
+      slug: "pingboard",
+      name: "Pingboard",
+      description:
+        "Dashboard de monitoramento de rede que roda de verdade. A cada 5 minutos, um coletor no GitHub Actions mede DNS, TCP, TLS e HTTP de resolvers públicos, CDNs e sites brasileiros, e grava o histórico no Supabase. O painel mostra a latência fase por fase, uptime de 24 h a 30 dias, validade de certificados e incidentes. Não usa ping: os runners não entregam ICMP, então cada fase da conexão é cronometrada separadamente.",
+      stack: ["Next.js", "TypeScript", "Supabase", "GitHub Actions", "Tailwind"],
+      category: "redes",
+      repoUrl: "https://github.com/joaovlopes/pingboard",
+      liveUrl: "https://pingboard-mauve.vercel.app/",
+      highlight: true,
+    },
+    {
       slug: "packetlog",
       name: "PacketLog",
       description:
