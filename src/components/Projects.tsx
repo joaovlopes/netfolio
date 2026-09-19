@@ -6,6 +6,7 @@ const CATEGORY_LABEL: Record<ProjectItem["category"], string> = {
   redes: "Redes",
   software: "Software",
   infra: "Infraestrutura",
+  blog: "Blog",
 };
 
 export default function Projects() {
@@ -16,7 +17,11 @@ export default function Projects() {
           <SectionHeading eyebrow="ls -la projetos/" title="Projetos" />
         </Reveal>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div
+          className={`grid gap-6 ${
+            profile.projects.length > 1 ? "sm:grid-cols-2" : "max-w-2xl"
+          }`}
+        >
           {profile.projects.map((project, i) => (
             <Reveal key={project.slug} delay={i * 0.08}>
               <article className="group flex h-full flex-col rounded-xl border border-border bg-surface p-6 transition-all hover:-translate-y-1.5 hover:border-accent/60 hover:bg-surface-hover hover:shadow-xl hover:shadow-accent/5">

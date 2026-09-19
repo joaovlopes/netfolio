@@ -21,7 +21,7 @@ export type ProjectItem = {
   name: string;
   description: string;
   stack: string[];
-  category: "redes" | "software" | "infra";
+  category: "redes" | "software" | "infra" | "blog";
   repoUrl?: string;
   liveUrl?: string;
   highlight?: boolean;
@@ -137,66 +137,15 @@ export const profile = {
   ] satisfies ExperienceItem[],
   projects: [
     {
-      slug: "todo-list",
-      name: "ToDo List",
+      slug: "packetlog",
+      name: "PacketLog",
       description:
-        "Mini projeto em React com foco em fixar os conhecimentos básicos de controle de formulário, gerenciamento de estado e lógica de programação.",
-      stack: ["React", "Sass", "TypeScript"],
-      category: "software",
-      repoUrl: "https://github.com/joaovlopes/ToDo-List",
-      liveUrl: "https://joaovlopes.github.io/ToDo-List/",
+        "Blog onde documento meus estudos em redes de computadores. Cada artigo é escrito uma vez e sai em duas versões, a completa no blog e a resumida para o LinkedIn, com um histórico que registra o que e onde foi publicado. Tem editor de posts com preview ao vivo e deploy automático a cada push.",
+      stack: ["React", "TypeScript", "Tailwind", "Framer Motion"],
+      category: "blog",
+      repoUrl: "https://github.com/joaovlopes/packetlog",
+      liveUrl: "https://packetlog.vercel.app/",
       highlight: true,
-    },
-    {
-      slug: "ignite-feed",
-      name: "Ignite Feed",
-      description:
-        "Projeto de publicações e curtidas para praticar os conceitos básicos do React, com plataforma responsiva e interativa.",
-      stack: ["React", "Sass", "TypeScript"],
-      category: "software",
-      repoUrl: "https://github.com/joaovlopes/ignite-feed",
-      liveUrl: "https://joaovlopes.github.io/ignite-feed/",
-      highlight: true,
-    },
-    {
-      slug: "business-card",
-      name: "Business Card",
-      description:
-        "Projeto em Angular com foco em formulários reativos: gera um cartão de visitas personalizável, com cores, ícones e fontes à escolha do usuário.",
-      stack: ["Angular", "Sass", "TypeScript"],
-      category: "software",
-      repoUrl: "https://github.com/joaovlopes/business-card",
-      liveUrl: "https://joaovlopes.github.io/business-card/",
-    },
-    {
-      slug: "control-tower",
-      name: "Torre de Controle",
-      description:
-        "Tela desenvolvida com foco total em praticar habilidades em JavaScript, em que o usuário se torna o piloto de uma nave.",
-      stack: ["HTML", "Sass", "JavaScript"],
-      category: "software",
-      repoUrl: "https://github.com/joaovlopes/Control-tower-of-a-spaceship",
-      liveUrl: "https://joaovlopes.github.io/Control-tower-of-a-spaceship/",
-    },
-    {
-      slug: "landing-natal",
-      name: "Landing Page de Natal",
-      description:
-        "Primeiro projeto desenvolvido apenas com HTML e CSS — uma tela que serviu de aprendizado para fixar os fundamentos dessas duas tecnologias.",
-      stack: ["HTML5", "CSS3"],
-      category: "software",
-      repoUrl: "https://github.com/joaovlopes/layout-de-natal",
-      liveUrl: "https://joaovlopes.github.io/layout-de-natal/",
-    },
-    {
-      slug: "jordan-shoes",
-      name: "Jordan Shoes",
-      description:
-        "Tela responsiva inspirada em um desafio da comunidade iuricode — a primeira usando o framework Bootstrap, essencial para aprender na prática como utilizá-lo.",
-      stack: ["HTML5", "CSS3", "Bootstrap"],
-      category: "software",
-      repoUrl: "https://github.com/joaovlopes/Jordan-Shoes",
-      liveUrl: "https://joaovlopes.github.io/Jordan-Shoes/",
     },
   ] satisfies ProjectItem[],
   certifications: [
